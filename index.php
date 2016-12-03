@@ -8,6 +8,8 @@
                 Calcolo Codice Fiscale
             </title>
             <script>
+            
+                //obtain CF
                 function getCF() {
                   var xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
@@ -18,13 +20,30 @@
                   xhttp.open("POST", "back.php", true);
                   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                   xhttp.send("Cognome=" + document.getElementsByName("Cognome")[0].value + "&Nome=" + document.getElementsByName("Nome")[0].value + "&Sesso=" + document.getElementsByName("Sesso")[0].value + "&Anno=" + document.getElementsByName("Anno")[0].value + "&Mese=" + document.getElementsByName("Mese")[0].value + "&Giorno=" + document.getElementsByName("Giorno")[0].value + "&Comune=" + document.getElementsByName("Comune")[0].value);
-                  }
+                }
+                  
+
+                var use = 0;
+                //load xml                  
+                function loadDoc() {
+                    if(use==0){
+                        use++;
+                      var xhttp = new XMLHttpRequest();
+                      xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("Comune").innerHTML = this.responseText;
+                        }
+                      };
+                      xhttp.open("GET", "readCSV.php", true);
+                      xhttp.send();
+                    }
+                }
             </script>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 	</head>
 
-	<body>
+	<body onclick="loadDoc()">
             <div class="table-responsive"> 
 				
 				<div class="container">
@@ -61,20 +80,8 @@
 					<div class="row">
 						<div class="col-sm-2" align="center">Comune di nascita</div>
 						<div class="col-sm-10" align="center">
-							<select class="form-control" name="Comune" size="1">
-								<?php
-									$myfile = fopen("comuni.csv", "r") or die ("unable to open file!");
-									while(!feof($myfile))
-									{
-										$linea = fgets($myfile);
-										if(!feof($myfile))
-										{
-											$array = explode(",", $linea);
-											$com = trim($array[1]);
-											echo "<option value=" . $array[0] . ">". $com . "</option>";
-										}
-									}
-								?>
+							<select class="form-control" id="Comune" name="Comune" size="1">
+							 //ajax(?)
 							</select>
 						</div>
 					</div>
