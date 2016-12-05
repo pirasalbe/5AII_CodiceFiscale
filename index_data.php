@@ -18,7 +18,7 @@
 	<body>
             <div class="table-responsive"> <!-- class="img-responsive img-rounded" style="background-image: url(http://www.codicefiscaleonline.com/img/cf.png); background-repeat:no-repeat; background-position: left" -->
 			
-				<form action="index_data.php" method="post">
+				<form action="index_codice.php" method="post">
 				
     				<div class="container">
     					<div class="row">
