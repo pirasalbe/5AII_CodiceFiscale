@@ -90,8 +90,8 @@
     					<br>
     					
     					<div class="row">
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden" name="Sesso"><?php echo "<input type='hidden' name='Sesso' value='" . $sesso . "'>"; ?></div>
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden" name="Comune"><?php echo "<input type='hidden' name='Comune' value='" . $comune . "'>"; ?></div>
+    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden"><?php echo "<input type='hidden' name='Sesso' value='" . $sesso . "'>"; ?></div>
+    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden"><?php echo "<input type='hidden' name='Comune' value='" . $comune . "'>"; ?></div>
     					</div>
     				</div>				
 				</form>
