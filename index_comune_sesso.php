@@ -1,6 +1,9 @@
 <?php
     $cognome = $_REQUEST['Cognome'];
 	$nome = $_REQUEST['Nome'];
+	
+	setcookie("cognome", $cognome, time() + 86400, "/"); 
+	setcookie("nome", $nome, time() + 86400, "/"); 
 ?>
 
 <html>
@@ -24,7 +27,7 @@
     					<br>
     					
     					<div class="row">
-    						<div class="col-sm-2" align="center"><input class="btn btn-default" align="center" type="submit" name="submitCF" value="Codice Fiscale"></div>
+    						<div class="col-sm-2" align="center"><input class="btn btn-default" align="center" type="submit" name="submitCF" value="Next"></div>
     						<div class="col-sm-2" align="center">Sesso</div>
     						<div class="col-sm-3" align="center"><select class="form-control" name="Sesso" size="1">
     								<option value="01">Maschio</option>

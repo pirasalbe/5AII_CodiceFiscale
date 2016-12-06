@@ -2,13 +2,21 @@
 
     $codiceFiscale;
 
-	$property['cogn'] = $_REQUEST['Cognome'];
-	$property['nam'] = $_REQUEST['Nome'];
-	$property['mf'] = $_REQUEST['Sesso'];
 	$property['yy'] = $_REQUEST['Anno'];
 	$property['mm'] = $_REQUEST['Mese'];
 	$property['dd'] = $_REQUEST['Giorno'];
-	$property['cm'] = $_REQUEST['Comune'];
+	
+	
+	$property['cogn'] = $_COOKIE["cognome"];
+	$property['nam'] = $_COOKIE["nome"];
+	$property['mf'] = $_COOKIE["sesso"];
+	$property['cm'] = $_COOKIE["comune"];
+	
+	
+    setcookie("cognome", $cognome, time() - 86400, "/"); 
+	setcookie("nome", $nome, time() - 86400, "/"); 
+	setcookie("comune", $comune, time() - 86400, "/"); 
+	setcookie("sesso", $sesso, time() - 86400, "/"); 
 		
 	$codiceFiscale = new CodiceFiscale($property);
 	

@@ -17,7 +17,7 @@
     					</div>
     					
     					<div class="row">
-    						<div class="col-sm-2" align="center"><input class="btn btn-default" align="center" type="submit" name="submitCF" value="Codice Fiscale"></div>
+    						<div class="col-sm-2" align="center"><input class="btn btn-default" align="center" type="submit" name="submitCF" value="Next"></div>
     						<div class="col-sm-2" align="center">Cognome</div>
     						<div class="col-sm-3" align="center"><input class="form-control" type="text" name="Cognome" placeholder="Rossi"></div>
     						<div class="col-sm-2" align="center">Nome</div>

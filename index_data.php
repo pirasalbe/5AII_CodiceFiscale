@@ -2,6 +2,8 @@
 	$sesso = $_REQUEST['Sesso'];
 	$comune = $_REQUEST['Comune'];
 
+	setcookie("comune", $comune, time() + 86400, "/"); 
+	setcookie("sesso", $sesso, time() + 86400, "/"); 
 ?>
 
 <html>
@@ -25,7 +27,7 @@
     					<br>
     					
     					<div class="row">
-    						<div class="col-sm-2" align="center"><input class="btn btn-default" align="center" type="submit" name="submitCF" value="Codice Fiscale"></div>
+    						<div class="col-sm-2" align="center"><input class="btn btn-default" align="center" type="submit" name="submitCF" value="Next"></div>
     						<div class="col-sm-2" align="center">Data</div>
 						<div class="col-sm-2" align="center"><select class="form-control" name="Giorno" size="1">
 								<option value="01">01</option>
