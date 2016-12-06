@@ -1,7 +1,4 @@
 <?php
-
-	$cognome = $_REQUEST['Cognome'];
-	$nome = $_REQUEST['Nome'];
 	$sesso = $_REQUEST['Sesso'];
 	$comune = $_REQUEST['Comune'];
 
@@ -78,20 +75,6 @@
 								<option value="12">Dicembre</option>
 							</select></div>
 						<div class="col-sm-4" align="center"><input class="form-control" type="text" name="Anno" value="1990"></div>
-    					</div>
-    					
-    					<br>
-    					
-    					<div class="row">
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden"><?php echo "<input type='hidden' name='Cognome' value='" . $cognome . "'>"; ?></div>
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden"><?php echo "<input type='hidden' name='Nome' value='" . $nome . "'>"; ?></div>
-    					</div>
-    					
-    					<br>
-    					
-    					<div class="row">
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden"><?php echo "<input type='hidden' name='Sesso' value='" . $sesso . "'>"; ?></div>
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden"><?php echo "<input type='hidden' name='Comune' value='" . $comune . "'>"; ?></div>
     					</div>
     				</div>				
 				</form>

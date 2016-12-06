@@ -49,13 +49,6 @@
     							</select>
     						</div>
     					</div>
-    					
-    					<br>
-    					
-    					<div class="row">
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden" name="Cognome"><?php echo "<input type='hidden' name='Cognome' value='" . $cognome . "'>"; ?></div>
-    						<div class="col-sm-6" align="center"><input class="form-control" type="hidden" name="Nome"><?php echo "<input type='hidden' name='Nome' value='" . $nome . "'>"; ?></div>
-    					</div>
     				</div>				
 				</form>
             </div>
