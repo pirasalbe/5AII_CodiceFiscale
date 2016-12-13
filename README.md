@@ -1,3 +1,3 @@
 # 5AII_CodiceFiscale
 
-Using more passages to give information with cookies
+Using more passages to give information using sessions
