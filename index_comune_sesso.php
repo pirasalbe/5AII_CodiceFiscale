@@ -1,9 +1,6 @@
 <?php
-    $cognome = $_REQUEST['Cognome'];
-	$nome = $_REQUEST['Nome'];
-	
-	setcookie("cognome", $cognome, time() + 86400, "/"); 
-	setcookie("nome", $nome, time() + 86400, "/"); 
+    $_SESSION['cognome'] = $_REQUEST['Cognome'];
+	$_SESSION['nome'] = $_REQUEST['Nome']; 
 ?>
 
 <html>

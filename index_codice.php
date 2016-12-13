@@ -7,16 +7,13 @@
 	$property['dd'] = $_REQUEST['Giorno'];
 	
 	
-	$property['cogn'] = $_COOKIE["cognome"];
-	$property['nam'] = $_COOKIE["nome"];
-	$property['mf'] = $_COOKIE["sesso"];
-	$property['cm'] = $_COOKIE["comune"];
+	$property['cogn'] = $_SESSION["cognome"];
+	$property['nam'] = $_SESSION["nome"];
+	$property['mf'] = $_SESSION["sesso"];
+	$property['cm'] = $_SESSION["comune"];
 	
-	
-    setcookie("cognome", $cognome, time() - 86400, "/"); 
-	setcookie("nome", $nome, time() - 86400, "/"); 
-	setcookie("comune", $comune, time() - 86400, "/"); 
-	setcookie("sesso", $sesso, time() - 86400, "/"); 
+	session_destroy();
+    $_SESSION = array();
 		
 	$codiceFiscale = new CodiceFiscale($property);
 	

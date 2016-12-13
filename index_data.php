@@ -1,9 +1,6 @@
 <?php
-	$sesso = $_REQUEST['Sesso'];
-	$comune = $_REQUEST['Comune'];
-
-	setcookie("comune", $comune, time() + 86400, "/"); 
-	setcookie("sesso", $sesso, time() + 86400, "/"); 
+	$_SESSION['sesso'] = $_REQUEST['Sesso'];
+	$_SESSION['comune'] = $_REQUEST['Comune'];
 ?>
 
 <html>
