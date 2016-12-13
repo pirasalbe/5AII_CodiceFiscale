@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	$_SESSION['sesso'] = $_REQUEST['Sesso'];
 	$_SESSION['comune'] = $_REQUEST['Comune'];
 ?>

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $_SESSION['cognome'] = $_REQUEST['Cognome'];
 	$_SESSION['nome'] = $_REQUEST['Nome']; 
 ?>
